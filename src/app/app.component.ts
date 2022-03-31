@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { DataShareService } from './data-share.service';
 
 @Component({
   selector: 'my-app',
@@ -6,5 +7,11 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  name : string = 'Angular ';
+  name : string;
+  constructor(private _dataShare : DataShareService){
+    this._dataShare.subject.subscribe(res => {
+      this.name = res;
+    })
+  }
+
 }
