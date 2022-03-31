@@ -1,3 +1,12 @@
-<p>
-second works!
-</p>
+<div class="card">
+  <div class="card-header">First Component</div>
+  <div class="card-body">
+    <p>
+      My name is <span>"{{ name }}"</span>
+    </p>
+    <input type="text" class="form-control mb-3" #sName />
+    <button class="btn btn-primary" (click)="changeName(sName)">
+      Change Name
+    </button>
+  </div>
+</div>

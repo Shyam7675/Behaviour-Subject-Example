@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DataShareService {
   subject = new BehaviorSubject<string>('Shyam'); 
-
+  
   constructor() { }
 
 }
